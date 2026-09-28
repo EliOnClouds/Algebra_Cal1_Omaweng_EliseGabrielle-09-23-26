@@ -48,10 +48,9 @@ elif choice == "5":
   b = float(input("Enter the value of b: "))
   c = float(input("Enter the value of c: "))
   x = float(input("Enter the value of x: "))
-  f = lambda t: a * (t**2) + b * t + c
-  print("Left-hand Limit: ", f(x - 0.0001))
-  print("Right-hand Limit: ", f(x + 0.0001))
-  print("True Limit: ", f(x))
+  print("Left-hand Limit: ", a * ((x - 0.00001) ** 2) + b * (x - 0.00001) + c)
+  print("Right-hand Limit: ", a * ((x + 0.00001) ** 2) + b * (x + 0.00001) + c)
+  print("True Limit: ", a * (x ** 2) + b * x + c)
 
 elif choice == "6":
   a = int(input("Enter a value of coefficient: "))
